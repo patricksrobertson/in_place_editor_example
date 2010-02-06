@@ -1,0 +1,573 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (330.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206003728)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100206003728')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("widgets")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("widgets")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206004100)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "widgets" already exists: CREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+
+
+Processing WidgetsController#index (for 127.0.0.1 at 2010-02-05 19:46:26) [GET]
+  [4;36;1mWidget Load (0.3ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/widgets
+Rendering widgets/index
+Completed in 137ms (View: 133, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WidgetsController#new (for 127.0.0.1 at 2010-02-05 19:46:30) [GET]
+Rendering template within layouts/widgets
+Rendering widgets/new
+
+ActionView::TemplateError (undefined method `name' for #<Widget id: nil, created_at: nil, updated_at: nil>) on line #8 of app/views/widgets/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :name %><br />
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :description %><br />
+
+    app/views/widgets/new.html.erb:8
+    app/views/widgets/new.html.erb:3
+    app/controllers/widgets_controller.rb:32:in `new'
+
+Rendered rescues/_trace (46.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206004100)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "widgets" already exists: CREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("widgets")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (340.7ms)[0m   [0;1mCREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (342.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100206003728')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100206003728')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206004100)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100206004100')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("widgets")[0m
+
+
+Processing WidgetsController#new (for 127.0.0.1 at 2010-02-05 19:48:07) [GET]
+Rendering template within layouts/widgets
+Rendering widgets/new
+
+ActionView::TemplateError (undefined method `description' for #<Widget id: nil, name: nil, created_at: nil, updated_at: nil>) on line #12 of app/views/widgets/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :description %><br />
+12:     <%= f.text_field :description %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/widgets/new.html.erb:12
+    app/views/widgets/new.html.erb:3
+    app/controllers/widgets_controller.rb:32:in `new'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206004100)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "widgets"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100206004100'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206004100)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (131.2ms)[0m   [0mCREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100206004100')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("widgets")[0m
+
+
+Processing WidgetsController#new (for 127.0.0.1 at 2010-02-05 19:49:40) [GET]
+Rendering template within layouts/widgets
+Rendering widgets/new
+Completed in 77ms (View: 72, DB: 0) | 200 OK [http://localhost/widgets/new]
+
+
+Processing WidgetsController#create (for 127.0.0.1 at 2010-02-05 19:49:56) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"zD0p1V1/28qJZyuHqGKsCvqrzsXDlZ3ZKPC9rHxemz4=", "widget"=>{"name"=>"bob", "description"=>"bob really enjoys life."}}
+  [4;36;1mWidget Create (269.0ms)[0m   [0;1mINSERT INTO "widgets" ("name", "updated_at", "description", "created_at") VALUES('bob', '2010-02-06 00:49:56', 'bob really enjoys life.', '2010-02-06 00:49:56')[0m
+Redirected to http://localhost:3000/widgets/1
+Completed in 422ms (DB: 269) | 302 Found [http://localhost/widgets]
+
+
+Processing WidgetsController#show (for 127.0.0.1 at 2010-02-05 19:49:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/widgets/1]
+
+
+Processing WidgetsController#index (for 127.0.0.1 at 2010-02-05 19:49:57) [GET]
+  [4;36;1mWidget Load (0.4ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/widgets
+Rendering widgets/index
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x253c2ec>) on line #11 of app/views/widgets/index.html.erb:
+8: 
+9: <% @widgets.each do |widget| %>
+10:   <tr>
+11:     <td><%= @widget = widget; in_place_editor_field :widgets, :name %></td>
+12:     <td><%=in_place_editor_field :widgets, :description %></td>
+13:     <td><%= link_to 'Show', widget %></td>
+14:     <td><%= link_to 'Edit', edit_widget_path(widget) %></td>
+
+    app/views/widgets/index.html.erb:11
+    app/views/widgets/index.html.erb:9:in `each'
+    app/views/widgets/index.html.erb:9
+    app/controllers/widgets_controller.rb:10:in `index'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WidgetsController#index (for 127.0.0.1 at 2010-02-05 19:50:36) [GET]
+  [4;35;1mWidget Load (0.4ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/widgets
+Rendering widgets/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/widgets]
+
+
+Processing WidgetsController#index (for 127.0.0.1 at 2010-02-05 19:51:50) [GET]
+  [4;36;1mWidget Load (0.4ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/widgets
+Rendering widgets/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/widgets]
+
+
+Processing WidgetsController#index (for 127.0.0.1 at 2010-02-05 19:52:31) [GET]
+  [4;35;1mWidget Load (0.4ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/widgets
+Rendering widgets/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/widgets]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:53:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #7 of app/views/widgets/edit.html.erb:
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+7: 	<%= in_place_editor_field :widgets,:name%>
+8:   </p>
+9:   <p>
+10:     <%= f.label :description %><br />
+
+    app/views/widgets/edit.html.erb:7
+    app/views/widgets/edit.html.erb:3
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:53:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:54:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:55:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 86ms (View: 81, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:55:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:56:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 79ms (View: 74, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:57:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+
+ActionView::TemplateError (undefined local variable or method `include_in_place_editing' for #<ActionView::Base:0x236e2d0>) on line #9 of app/views/layouts/widgets.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Widgets: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9: <%= include_in_place_editing %>
+10: </head>
+11: <body>
+12: 
+
+    app/views/layouts/widgets.html.erb:9
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:57:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:57:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #7 of app/views/widgets/edit.html.erb:
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+7: 	<%= in_place_editor_field :widgets,:name%>
+8:   </p>
+9:   <p>
+10:     <%= f.label :description %><br />
+
+    app/views/widgets/edit.html.erb:7
+    app/views/widgets/edit.html.erb:3
+
+Rendered rescues/_trace (97.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:58:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:58:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #7 of app/views/widgets/edit.html.erb:
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+7: 	<%= in_place_editor_field :widgets,:name%>
+8:   </p>
+9:   <p>
+10:     <%= f.label :description %><br />
+
+    app/views/widgets/edit.html.erb:7
+    app/views/widgets/edit.html.erb:3
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WidgetsController#edit (for 127.0.0.1 at 2010-02-05 19:58:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 1) [0m
+Rendering template within layouts/widgets
+Rendering widgets/edit
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/widgets/1/edit]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206004100)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "widgets"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100206004100'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWidgets (20100206010214)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "widgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100206010214')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("widgets")[0m
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:02:42) [GET]
+Rendering widget/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/widget]
+  [4;36;1mWidget Create (0.4ms)[0m   [0;1mINSERT INTO "widgets" ("name", "updated_at", "description", "created_at") VALUES('blah', '2010-02-06 01:07:13', 'blee', '2010-02-06 01:07:13')[0m
+  [4;35;1mWidget Load (0.4ms)[0m   [0mSELECT * FROM "widgets" [0m
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:07:37) [GET]
+  [4;36;1mWidget Load (0.5ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering widget/index
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:07:48) [GET]
+  [4;35;1mWidget Load (0.4ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering widget/index
+Completed in 57ms (View: 53, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:09:46) [GET]
+  [4;36;1mWidget Load (0.4ms)[0m   [0;1mSELECT * FROM "widgets" LIMIT 1[0m
+Rendering widget/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:11:15) [GET]
+  [4;35;1mWidget Load (0.4ms)[0m   [0mSELECT * FROM "widgets" LIMIT 1[0m
+Rendering widget/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:13:01) [GET]
+  [4;36;1mWidget Load (0.4ms)[0m   [0;1mSELECT * FROM "widgets" LIMIT 1[0m
+Rendering widget/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/widget]
+  [4;36;1mWidget Create (0.4ms)[0m   [0;1mINSERT INTO "widgets" ("name", "updated_at", "description", "created_at") VALUES(NULL, '2010-02-06 01:16:11', NULL, '2010-02-06 01:16:11')[0m
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:16:27) [GET]
+  [4;36;1mWidget Load (0.5ms)[0m   [0;1mSELECT * FROM "widgets" LIMIT 1[0m
+Rendering widget/index
+Completed in 25ms (View: 21, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:17:11) [GET]
+  [4;35;1mWidget Load (0.4ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering widget/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:17:21) [GET]
+  [4;36;1mWidget Load (0.4ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering widget/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#set_widget_name (for 127.0.0.1 at 2010-02-05 20:17:59) [POST]
+  Parameters: {"authenticity_token"=>"zD0p1V1/28qJZyuHqGKsCvqrzsXDlZ3ZKPC9rHxemz4=", "id"=>"2", "value"=>"", "editorId"=>"widget_name_2_in_place_editor"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/widget/set_widget_name/2]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:18:01) [GET]
+  [4;36;1mWidget Load (0.5ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering widget/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#set_widget_name (for 127.0.0.1 at 2010-02-05 20:18:05) [POST]
+  Parameters: {"authenticity_token"=>"zD0p1V1/28qJZyuHqGKsCvqrzsXDlZ3ZKPC9rHxemz4=", "id"=>"2", "value"=>"bob", "editorId"=>"widget_name_2_in_place_editor"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 2) [0m
+  [4;36;1mWidget Update (0.4ms)[0m   [0;1mUPDATE "widgets" SET "name" = 'bob', "updated_at" = '2010-02-06 01:18:05' WHERE "id" = 2[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/widget/set_widget_name/2]
+
+
+Processing WidgetController#set_widget_description (for 127.0.0.1 at 2010-02-05 20:18:10) [POST]
+  Parameters: {"authenticity_token"=>"zD0p1V1/28qJZyuHqGKsCvqrzsXDlZ3ZKPC9rHxemz4=", "id"=>"2", "value"=>"this is so much fun.", "editorId"=>"widget_description_2_in_place_editor"}
+  [4;35;1mWidget Load (0.2ms)[0m   [0mSELECT * FROM "widgets" WHERE ("widgets"."id" = 2) [0m
+  [4;36;1mWidget Update (0.2ms)[0m   [0;1mUPDATE "widgets" SET "description" = 'this is so much fun.', "updated_at" = '2010-02-06 01:18:10' WHERE "id" = 2[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/widget/set_widget_description/2]
+
+
+Processing WidgetController#index (for 127.0.0.1 at 2010-02-05 20:18:26) [GET]
+  [4;35;1mWidget Load (0.5ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering widget/index
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/widget]
+
+
+Processing WidgetController#set_widget_description (for 127.0.0.1 at 2010-02-05 20:18:29) [POST]
+  Parameters: {"authenticity_token"=>"zD0p1V1/28qJZyuHqGKsCvqrzsXDlZ3ZKPC9rHxemz4=", "id"=>"2", "value"=>"this is so much fun.", "editorId"=>"widget_description_2_in_place_editor"}
+  [4;36;1mWidget Load (0.2ms)[0m   [0;1mSELECT * FROM "widgets" WHERE ("widgets"."id" = 2) [0m
+Completed in 6ms (View: 0, DB: 0) | 200 OK [http://localhost/widget/set_widget_description/2]
