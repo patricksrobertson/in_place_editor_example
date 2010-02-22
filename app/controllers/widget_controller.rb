@@ -5,4 +5,5 @@ class WidgetController < ApplicationController
     @widgets = Widget.find(:all)
   end
 
+  
 end

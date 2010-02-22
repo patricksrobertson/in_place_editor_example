@@ -1,10 +1,8 @@
-<head>
-	 <%= javascript_include_tag :defaults %>
-	 <%= include_in_place_editing %>
-</head>
-
-<h1>In place edit for the widgets</h2>
+<h2>Quick In Place Editor Example:</h2><br/>
+<p>There are two fields for the widget object.  The name object is not allowed to be blank.  So it'll alert you when you try to make it blank.  The Description shows off what happens when you add a rows option to the in place editor fields. </p>
 <% for @widget in @widgets %>
 	Edit name here: <%= in_place_editor_field "widget", :name %><br />
 	Edit description here: <%= in_place_editor_field :widget, :description,{},:rows=>'3' %><br /><br />
 <% end %>
+
+
